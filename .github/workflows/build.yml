@@ -27,3 +27,6 @@ jobs:
       - name: Build package
         run: |
           nix build .#${{ matrix.package }}; nix build .#${{ matrix.package }} --rebuild
+
+      - name: Setup upterm session
+        uses: owenthereal/action-upterm@v1
